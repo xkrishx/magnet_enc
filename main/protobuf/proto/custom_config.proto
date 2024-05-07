@@ -1,0 +1,21 @@
+syntax  = "proto3";
+
+enum CustomConfigStatus {
+	ConfigSuccess = 0;
+	ConfigFail = 1;
+}
+
+message CustomConfigRequest {
+	string info = 1;
+	int32 version = 2;
+	string serial_num = 3;
+	string device_name = 4;
+	string appliance_type = 5;
+	string device_model = 6;
+	string device_modelCode = 7;
+}
+
+message CustomConfigResponse {
+	CustomConfigStatus status = 1;
+	int32 dummy = 2;
+}
